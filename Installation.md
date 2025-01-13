@@ -1,5 +1,4 @@
 
-
 ```markdown
 # NumPy Installation Guide
 
@@ -9,21 +8,27 @@ NumPy is a powerful library for numerical computing in Python. It provides suppo
 
 ---
 
-## Installation on macOS
+*** Installation on macOS
 
 ### Step 1: Install Python
 
 Before installing NumPy, make sure you have Python installed on your macOS. If not, you can download and install it from the official [Python website](https://www.python.org/downloads/).
 
+To check if Python is installed, open the Terminal and type:
+
+```bash
+python3 --version
+```
+
+If Python is not installed, you can install it using Homebrew by running:
+
+```bash
+brew install python
+```
+
 ### Step 2: Install NumPy Using `pip`
 
 Once Python is installed, open the Terminal and run the following command to install NumPy:
-
-```bash
-pip install numpy
-```
-
-If you are using Python 3, make sure to use `pip3` instead:
 
 ```bash
 pip3 install numpy
@@ -34,7 +39,7 @@ pip3 install numpy
 To check if NumPy was installed correctly, run the following in your Terminal:
 
 ```bash
-python -c "import numpy as np; print(np.__version__)"
+python3 -c "import numpy as np; print(np.__version__)"
 ```
 
 If everything is set up properly, this will print the installed version of NumPy.
@@ -116,4 +121,3 @@ If the installation is successful, it will print the version of NumPy you instal
   
 - **`pip` Not Found**: If `pip` is not installed, you can install it by following the [official guide](https://pip.pypa.io/en/stable/installation/).
 ```
-
