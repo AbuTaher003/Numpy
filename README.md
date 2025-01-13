@@ -334,6 +334,95 @@ list2 = [25, 26]
 
 print(list1 + list2)  # Just extends the list
 ```
+# NumPy Array Operations and Insights
+
+### 30. Square Root of Elements
+```python
+import numpy as np
+ar = np.array([[7, 8, 9],
+               [3, 4, 5],
+               [2, 1, 6]])
+np.sqrt(ar)
+```
+**Explanation:**
+This computes the square root of each element in the array `ar`.
+
+### 31. Maximum and Minimum Values in the Array
+```python
+ar.max()  # Finds the maximum element in the array.
+ar.min()  # Finds the minimum element in the array.
+```
+**Explanation:**
+- `ar.max()` returns the largest element in the array.
+- `ar.min()` returns the smallest element in the array.
+
+### 32. Finding Positions of Elements Greater than a Value
+```python
+np.where(ar > 5)
+```
+**Explanation:**
+This returns the indices of all elements in `ar` that are greater than `5`.
+
+### 33. Counting Non-Zero Elements
+```python
+np.count_nonzero(ar)
+```
+**Explanation:**
+This counts the number of non-zero elements in the array `ar`.
+
+### 34. Finding Non-Zero Element Positions
+```python
+np.nonzero(ar)
+```
+**Explanation:**
+This returns a tuple with indices of all non-zero elements for each axis. For example:
+- If `ar = [[7, 0], [3, 4]]`, `np.nonzero(ar)` returns `([0, 1, 1], [0, 0, 1])`.
+
+### 35. Modifying Array Elements
+```python
+ar[1, 2] = 0
+np.nonzero(ar)
+```
+**Explanation:**
+- Before modification: The element at index `(1, 2)` was non-zero.
+- After setting `ar[1, 2] = 0`, `np.nonzero(ar)` excludes this position.
+
+### 36. Memory Comparison: Python List vs NumPy Array
+```python
+import sys
+py_ar = [1, 2, 3, 4]  # Python list
+np_ar = np.array(py_ar)  # NumPy array
+
+# Memory used by Python list
+total_memory_list = sys.getsizeof(1) * len(py_ar)
+
+# Memory used by NumPy array
+total_memory_numpy = np_ar.itemsize * np_ar.size
+```
+**Explanation:**
+- `sys.getsizeof(1) * len(py_ar)` calculates the memory required to store the Python list.
+- `np_ar.itemsize * np_ar.size` calculates the memory required to store the NumPy array.
+- Example:
+  - Python list may require `112 bytes`.
+  - NumPy array may require `32 bytes`.
+
+### 37. Converting NumPy Array to Python List
+```python
+bal = np_ar.tolist()
+type(bal)
+```
+**Explanation:**
+- `np_ar.tolist()` converts a NumPy array to a Python list.
+- `type(bal)` confirms the data type of the result.
+
+---
+
+### Why Use NumPy?
+The examples above highlight the efficiency of NumPy:
+- Faster computations.
+- Significant memory savings.
+- Simplified operations compared to native Python lists.
+
 
 - This code shows how Python lists behave when you use the `+` operator. It simply extends the list rather than performing element-wise arithmetic addition.
 
