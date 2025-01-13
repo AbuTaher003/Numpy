@@ -260,3 +260,81 @@ This code prints the total number of elements in the array, which will be `9` fo
 
 ---
 
+## 23. Creating a One-Dimensional Array
+
+```python
+import numpy as np
+
+one = np.array([1, 4, 3, 64, 2])  # Creating a one-dimensional array
+```
+
+- This code creates a one-dimensional NumPy array named `one` with the values `[1, 4, 3, 64, 2]`.
+
+---
+
+## 24. Finding the Index of Maximum Element
+
+```python
+print(one.argmax())  # Returns the index of the maximum element
+```
+
+- `one.argmax()` returns the index of the maximum element in the array `one`. In this case, it will return `3` because the maximum value is `64` and it is at index `3`.
+
+---
+
+## 25. Finding the Index of Minimum Element
+
+```python
+print(one.argmin())  # Returns the index of the minimum element
+```
+
+- `one.argmin()` returns the index of the minimum element in the array `one`. In this case, it will return `0` because the minimum value is `1` and it is at index `0`.
+
+---
+
+## 26. Sorting the Array and Getting Sorted Indices
+
+```python
+print(one.argsort())  # Returns the indices that would sort the array
+```
+
+- `one.argsort()` returns the indices that would sort the array `one`. In this case, it will return `[0, 4, 2, 1, 3]`, meaning the array would be sorted as `[1, 2, 3, 4, 64]` using these indices.
+
+---
+
+## 27. Demonstrating the Use of Axis in `argmax()`
+
+```python
+ar = np.array([[7, 8, 9], [3, 4, 5], [2, 1, 6]])
+print(ar.argmax(axis=0))  # Maximum element indices for each column
+print(ar.argmax(axis=1))  # Maximum element indices for each row
+```
+
+- `ar.argmax(axis=0)` returns the indices of the maximum element for each column.
+- `ar.argmax(axis=1)` returns the indices of the maximum element for each row.
+
+---
+
+## 28. Array Addition in NumPy
+
+```python
+ar2 = np.array([[7, 8, 9], [3, 4, 5], [2, 1, 6]])
+print(ar + ar2)  # Adding two arrays element-wise
+```
+
+- This code demonstrates element-wise addition of two NumPy arrays `ar` and `ar2`. The result will be the sum of corresponding elements in the two arrays.
+
+---
+
+## 29. Demonstrating List Addition in Python (Without NumPy)
+
+```python
+list1 = [23, 24]
+list2 = [25, 26]
+
+print(list1 + list2)  # Just extends the list
+```
+
+- This code shows how Python lists behave when you use the `+` operator. It simply extends the list rather than performing element-wise arithmetic addition.
+
+---
