@@ -427,3 +427,5 @@ The examples above highlight the efficiency of NumPy:
 - This code shows how Python lists behave when you use the `+` operator. It simply extends the list rather than performing element-wise arithmetic addition.
 
 ---
+
+
